@@ -12,6 +12,7 @@ This repository contains a complete pipeline for time series anomaly detection o
 - Enable dashboard-ready outputs for integration into SAP-based systems.
 
 ## Repository Structure
+```
 sumitrra_sap/
 ├── preprocessing/
 │   ├── tadgan_preprocessing.ipynb       # Full data cleaning, encoding & scaling
@@ -27,6 +28,7 @@ sumitrra_sap/
 ├── data/                                # (Local or cloud-stored data not in GitHub)
 │
 └── README.md                            # You're here!
+```
 
 ## Preprocessing Overview
 
