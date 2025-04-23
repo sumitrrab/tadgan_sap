@@ -36,39 +36,74 @@ sumitrra_sap/
 
 - Missing value treatment:
 
-Binary → Fill with 0
+-- Binary → Fill with 0
 
-Numeric → Median
+-- Numeric → Median
 
-Categorical → Mode
+-- Categorical → Mode
 
 - Encoding:
 
-High-cardinality: frequency encoding
+-- High-cardinality: frequency encoding
 
-Low-cardinality: one-hot encoding
+-- Low-cardinality: one-hot encoding
 
-MinMax scaling of all non-binary features
+- MinMax scaling of all non-binary features
 
 - Final dataset: Fully numeric and normalized
 
 ## Model: TadGAN Architecture
 
-Generator: LSTM Encoder-Decoder
+- Generator: LSTM Encoder-Decoder
 
-Discriminator: LSTM + Dense output
+- Discriminator: LSTM + Dense output
 
-Loss functions:
+- Loss functions:
 
-BCEWithLogits (adversarial)
+-- BCEWithLogits (adversarial)
 
-MSE (reconstruction)
+-- MSE (reconstruction)
 
-Training:
+- Training:
 
-Mixed precision (AMP) for speed
+-- Mixed precision (AMP) for speed
 
-Reconstruction error tracked across epochs
+-- Reconstruction error tracked across epochs
 
-Threshold computed using 99th percentile
+-- Threshold computed using 99th percentile
+
+## Post-Hoc Analysis & Explainability
+
+- Hybrid anomaly detection:
+
+-- Time-based threshold (rolling window mean + k·std)
+
+-- Feature-based threshold (MAD + percentile)
+
+- Explainable outputs:
+
+-- Heatmaps of anomalous features per sequence
+
+-- Scatter plots with feature names
+
+-- Sequence-to-original-row mapping
+
+## Key Features
+
+- Temporal modeling using overlapping sequences
+
+- Time + feature anomaly explainability
+
+- Dynamic thresholding via rolling stats
+
+- High audit-readiness with interpretable feature triggers
+
+## Requirements 
+- Python ≥ 3.8
+
+- PyTorch ≥ 1.10
+
+- NumPy, Pandas, Matplotlib, Seaborn
+
+- Optional: GPU for faster GAN training
 
