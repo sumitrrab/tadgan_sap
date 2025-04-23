@@ -36,17 +36,17 @@ sumitrra_sap/
 
 - Missing value treatment:
 
--- Binary → Fill with 0
+ - Binary → Fill with 0
 
--- Numeric → Median
+ - Numeric → Median
 
--- Categorical → Mode
+ - Categorical → Mode
 
 - Encoding:
-
--- High-cardinality: frequency encoding
-
--- Low-cardinality: one-hot encoding
+  
+  - High-cardinality: frequency encoding
+  
+  - Low-cardinality: one-hot encoding
 
 - MinMax scaling of all non-binary features
 
@@ -60,33 +60,33 @@ sumitrra_sap/
 
 - Loss functions:
 
--- BCEWithLogits (adversarial)
-
--- MSE (reconstruction)
+  - BCEWithLogits (adversarial)
+  
+  - MSE (reconstruction)
 
 - Training:
-
--- Mixed precision (AMP) for speed
-
--- Reconstruction error tracked across epochs
-
--- Threshold computed using 99th percentile
+  
+  - Mixed precision (AMP) for speed
+  
+  - Reconstruction error tracked across epochs
+  
+  - Threshold computed using 99th percentile
 
 ## Post-Hoc Analysis & Explainability
 
 - Hybrid anomaly detection:
 
--- Time-based threshold (rolling window mean + k·std)
-
--- Feature-based threshold (MAD + percentile)
+  - Time-based threshold (rolling window mean + k·std)
+  
+  - Feature-based threshold (MAD + percentile)
 
 - Explainable outputs:
 
--- Heatmaps of anomalous features per sequence
-
--- Scatter plots with feature names
-
--- Sequence-to-original-row mapping
+  - Heatmaps of anomalous features per sequence
+  
+  - Scatter plots with feature names
+  
+  - Sequence-to-original-row mapping
 
 ## Key Features
 
