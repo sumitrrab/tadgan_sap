@@ -13,7 +13,6 @@ This repository contains a complete pipeline for time series anomaly detection o
 
 ## Repository Structure
 sumitrra_sap/
-│
 ├── preprocessing/
 │   ├── tadgan_preprocessing.ipynb       # Full data cleaning, encoding & scaling
 │   ├── sequence_generator.ipynb         # Convert tabular data into (N, seq_len, D) tensors
@@ -22,9 +21,10 @@ sumitrra_sap/
 │   ├── tadgan_v17.py                    # Generator & Discriminator training script with AMP
 │
 ├── analysis/
-│   ├── tadgan_analysis.ipynb           # Feature- and time-based anomaly detection
+│   ├── anomaly_analysis.ipynb           # Feature- and time-based anomaly detection
+│   ├── visualization_tools.ipynb        # Heatmaps, scatter plots, sequence mapping
 │
-├── Releases/                                # (Local or cloud-stored data not in GitHub)
+├── data/                                # (Local or cloud-stored data not in GitHub)
 │
 └── README.md                            # You're here!
 
